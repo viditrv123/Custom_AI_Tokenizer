@@ -15,12 +15,8 @@
     "nodemon": "^3.1.10"
   },
   "dependencies": {
-    "dictionary-en": "^4.0.0",
-    "en-dictionary": "^2.0.3",
     "express": "^5.1.0",
-    "import-meta-resolve": "^4.1.0",
     "ioredis": "^5.7.0",
-    "nspell": "^2.1.5",
     "wordlist-english": "^1.2.1"
   }
 }
