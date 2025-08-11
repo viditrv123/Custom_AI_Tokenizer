@@ -45,7 +45,10 @@ class RedisClient {
       return RedisClient.instance;
     }
 
-    this.redis = new Redis();
+    this.redis = new Redis({
+      host: "redis",
+      port: 6379,
+    });
     RedisClient.instance = this;
   }
 
