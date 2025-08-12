@@ -7,6 +7,8 @@ const getCaseCode = ({ word }) => {
       caseCode += "1";
     } else if (code >= 97 && code <= 122) {
       caseCode += "0";
+    } else {
+      caseCode += "0";
     }
   }
 

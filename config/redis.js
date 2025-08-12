@@ -38,6 +38,16 @@ class RedisClient {
     "`",
     "~",
     `/`,
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "0",
   ];
 
   constructor() {
@@ -67,6 +77,7 @@ class RedisClient {
     });
 
     dictionary.forEach((word, index) => {
+      pipeline.hset("dictionary", word, index + 1 + this.specialChars.length);
       pipeline.hset(
         "encoded-dictionary",
         index + 1 + this.specialChars.length,

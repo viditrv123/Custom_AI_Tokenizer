@@ -17,7 +17,7 @@ const decoder = async ({ encodedValues = [] }) => {
   const dictionary = await redis.hgetall("encoded-dictionary");
   let sentence = "";
   encodedValues?.forEach((val) => {
-    const [code, caseCode] = val.split("_");
+    const [code, caseCode] = val.split(".");
     let decodedWord = dictionary[code];
     if (caseCode) {
       decodedWord = getCaseSensitiveString({ caseCode, word: decodedWord });

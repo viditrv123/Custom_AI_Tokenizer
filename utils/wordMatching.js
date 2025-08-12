@@ -14,7 +14,7 @@ const findWordsInString = ({ text, dictionary }) => {
       const subStr = text.slice(start, end);
       if (dictionary[subStr.toLowerCase()]) {
         matches.push(
-          `${dictionary[subStr.toLowerCase()]}_${getCaseCode({ word: subStr })}`
+          `${dictionary[subStr.toLowerCase()]}.${getCaseCode({ word: subStr })}`
         );
         for (let i = start; i < end; i++) {
           covered[i] = true;
@@ -28,7 +28,7 @@ const findWordsInString = ({ text, dictionary }) => {
       const char = text[start];
       if (dictionary[char]) {
         matches.push(
-          di`${dictionary[char.toLowerCase()]}_${getCaseCode({ word: char })}`
+          `${dictionary[char.toLowerCase()]}.${getCaseCode({ word: char })}`
         );
         covered[start] = true;
       }
